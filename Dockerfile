@@ -1,7 +1,7 @@
 # This is a Docker image for RTIR.
 
 FROM reuteras/docker-rt
-MAINTAINER Peter Reuterås <peter@reuteras.net>
+MAINTAINER PR <code@reuteras.se>
 
 ENV RT_FIX_DEPS_CMD /usr/bin/cpanm
 ENV PERL_CPANM_OPT -n
