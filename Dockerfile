@@ -8,8 +8,8 @@ ENV PERL_CPANM_OPT -n
 
 USER root
 ## Install tools and libraries via apt
-RUN apt-get update -yqq && \
-    apt-get install -yqq --no-install-recommends \
+RUN apt update -yqq && \
+    apt install -yqq --no-install-recommends \
         build-essential \
         cpanminus \
         make \
@@ -24,10 +24,10 @@ RUN apt-get update -yqq && \
     cd /tmp/rtir/RT-IR-* && \
     perl Makefile.PL && \
     make install && \
-	apt-get remove -y build-essential cpanminus && \
-    apt-get autoremove -y && \
-    apt-get clean && \
-    apt-get autoclean && \
+	apt remove -y build-essential cpanminus && \
+    apt autoremove -y && \
+    apt clean && \
+    apt autoclean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/.cpan && \
     rm -rf /root/.cpanm && \
