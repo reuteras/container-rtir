@@ -25,9 +25,9 @@ RUN apt update -yqq && \
     perl Makefile.PL && \
     make install && \
 	apt remove -y build-essential cpanminus && \
-    apt autoremove -y && \
-    apt clean && \
-    apt autoclean && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /root/.cpan && \
     rm -rf /root/.cpanm && \
