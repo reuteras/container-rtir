@@ -1,6 +1,6 @@
 # This is a Docker image for RTIR.
 
-FROM reuteras/docker-rt
+FROM reuteras/docker-rt:v4
 MAINTAINER PR <code@ongoing.today>
 
 ENV RT_FIX_DEPS_CMD /usr/bin/cpanm
