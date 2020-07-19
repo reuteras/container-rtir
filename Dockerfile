@@ -1,5 +1,4 @@
 # This is a Docker image for RTIR.
-
 FROM reuteras/docker-rt:v4.4
 MAINTAINER PR <code@ongoing.today>
 
