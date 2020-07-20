@@ -1,5 +1,5 @@
 # This is a Docker image for RTIR.
-FROM reuteras/docker-rt:v4.4
+FROM reuteras/docker-rt
 MAINTAINER PR <code@ongoing.today>
 
 ENV RT_FIX_DEPS_CMD /usr/bin/cpanm
@@ -28,6 +28,7 @@ RUN apt update -yqq && \
     apt-get clean && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/* && \
+    rm -rf /tmp/rtir && \
     rm -rf /root/.cpan && \
     rm -rf /root/.cpanm && \
     rm -rf /preseed.txt /usr/share/doc && \
